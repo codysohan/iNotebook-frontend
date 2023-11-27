@@ -1,0 +1,36 @@
+nav{
+    width: 100vw;
+}
+
+#user-icon {
+    font-size: 22px;
+}
+
+#logo{
+    width: 40px;
+    margin-left: 11px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+#user-icon:hover {
+    color: #dc3545 !important;
+    transition: color 0.2s ease-in-out;
+}
+
+.mode-icon {
+    color: white;
+    font-size: 23px;
+}
+
+.mode-icon:hover{
+    transform: rotate(-15deg);
+    transition: transform 0.1s ease-in;
+}
+
+.mode-container {
+    margin: auto;
+    margin-left: 17px;
+    display: flex;
+    align-items: center;
+}

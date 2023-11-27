@@ -1,0 +1,77 @@
+/* Styling footer here */
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    width: 100vw;
+}
+
+.footer-left-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 34%;
+    margin-left: -22%;
+}
+
+.footer-left-item h3::after {
+    content: "";
+    /* Add an empty content for the pseudo-element */
+    border-left: 1px solid gray;
+    /* Vertical line style */
+    height: 50px;
+    /* Adjust the height as needed */
+    margin-top: 12px;
+    margin-left: 20px;
+    margin-right: 10px;
+    /* Adjust the margin as needed */
+}
+.footer-left-item h3{
+    margin-left: 9px;
+}
+
+.footer-left-item p {
+    margin-top: 9px;
+    color: gray;
+}
+
+.footer-left-item img {
+    margin-top: -2px;
+    width: 50px;
+    margin-left: -4px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+/* Styling right items of a footer  */
+.footer-right-item{
+    display: flex;
+    justify-content: space-between;
+    width: 8%;
+    margin-right: -22%;
+}
+
+.footer-right-item i{
+    font-size: 20px;
+}
+
+.footer-right-item a{
+    text-decoration: none;
+    color: gray;
+}
+/* 
+.fa-facebook-f:hover{
+    color: #1877F2;
+}
+
+.fa-x-twitter:hover{
+    color: black;
+}
+.fa-instagram:hover{
+    color: #d6249f;
+}
+.fa-github:hover{
+    color: black;
+} */
+

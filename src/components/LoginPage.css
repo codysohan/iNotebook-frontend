@@ -1,0 +1,8 @@
+/* Whenever the use changes the dark mode to light mode and vice versa this transition will be applied  */
+body {
+    transition: background-color, color 0.5s ease-in-out;
+}
+
+.container {
+    height: 63.2vh;
+}
