@@ -118,7 +118,6 @@ const Notes = () => {
                 }}
                 disabled={enote.etitle.length === 0 || enote.edescription.length === 0}
                 data-bs-dismiss="modal"
-
               >
                 Update Note
               </button>
@@ -127,7 +126,7 @@ const Notes = () => {
         </div>
       </div>
 
-      <div className="row text-center d-flex justify-content-evenly">
+      <div className="row text-center d-flex justify-content-center" style={{width: "100vw"}}>
         <h2 className="my-4">
           Your <span className="text-danger">All</span> Notes:{" "}
         </h2>
@@ -136,7 +135,7 @@ const Notes = () => {
             className="text-danger"
           >
             {" "}
-            No Notes are available!{" "}
+            No Notes are available! <i className="fa-regular fa-face-meh text-white"></i>{" "}
           </h5>
         ) : (
           notes.map((note) => (

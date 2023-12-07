@@ -2,6 +2,7 @@
 import NoteContext from "./noteContext";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import logo from "../../media/images/logo.jpg";
 
 const NoteState = (props) => {
   let navigate = useNavigate();
@@ -151,7 +152,8 @@ const NoteState = (props) => {
         showAlert,
         userDetails,
         mode,
-        handleMode
+        handleMode,
+        logo
       }}
     >
       {props.children}

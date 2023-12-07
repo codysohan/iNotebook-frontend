@@ -5,11 +5,11 @@ import { useLocation } from "react-router-dom";
 import noteContext from "../context/notes/noteContext";
 import UserDetails from "./UserDetails";
 import "./Navbar.css";
-import logo from "../media/images/footer-logo.jpg";
+// import logo from "../media/images/footer-logo.jpg";
 
 const Navbar = (props) => {
   const context = useContext(noteContext);
-  const { showAlert, mode, handleMode } = context;
+  const { showAlert, mode, handleMode, logo } = context;
 
   let navigate = useNavigate();
   let location = useLocation();
@@ -29,8 +29,8 @@ const Navbar = (props) => {
         data-bs-theme={mode}
       >
         <div className="container-fluid">
-        <Link className="navbar-brand" to="/">
-          <img src={logo} alt="Image not loaded..." id="logo"/>
+          <Link className="navbar-brand" to="/">
+            <img src={logo} alt="Img not loaded..." id="logo" />
           </Link>
           <Link className="navbar-brand" to="/">
             iNotebook
@@ -69,26 +69,24 @@ const Navbar = (props) => {
                   About
                 </Link>
               </li>
-              <li className="nav-item mode-container">
-                <i
-                  className={`fa-solid mode-icon ${
-                    mode === "dark" ? "fa-sun" : "fa-moon text-dark"
-                  }`}
-                  onClick={handleMode}
-                ></i>
-              </li>
+              <li className="nav-item mode-container"></li>
             </ul>
             <div className="btn-group" role="group" aria-label="Basic example">
               {/*If user is logged in, User will get logout btn otherwise he will
             get Login/Signup btn*/}
               {localStorage.getItem("token") ? (
                 <>
-                  <div
-                    className="d-flex align-items-center"
-                    style={{ width: "112px", justifyContent: "space-between", marginRight: "27px" }}
-                  >
+                  <div className="logout-container">
                     <i
-                      className={`fa-solid fa-user text-${mode==='dark'?'light':'dark'}`}
+                      className={`fa-solid mode-icon ${
+                        mode === "dark" ? "fa-sun" : "fa-moon text-dark"
+                      }`}
+                      onClick={handleMode}
+                    ></i>
+                    <i
+                      className={`fa-solid fa-user text-${
+                        mode === "dark" ? "light" : "dark"
+                      }`}
                       id="user-icon"
                       data-bs-toggle="modal"
                       data-bs-target="#userModal"
@@ -104,22 +102,31 @@ const Navbar = (props) => {
                 </>
               ) : (
                 <>
-                  <button type="button" className="btn btn-danger">
+                  <div className="login-signup-container">
+                    <i
+                      className={`fa-solid mode-icon  ${
+                        mode === "dark" ? "fa-sun" : "fa-moon text-dark"
+                      }`}
+                      onClick={handleMode}
+                    ></i>
                     <Link
                       className="text-white text-decoration-none"
                       to="/signup"
                     >
-                      SignUp
+                      <button type="button" className="btn btn-danger">
+                        SignUp
+                      </button>
                     </Link>
-                  </button>
-                  <button type="button" className="btn btn-danger mx-2">
+
                     <Link
                       className="text-white text-decoration-none"
                       to="/login"
                     >
-                      Login
+                      <button type="button" className="btn btn-danger mx-2">
+                        Login
+                      </button>
                     </Link>
-                  </button>
+                  </div>
                 </>
               )}
             </div>

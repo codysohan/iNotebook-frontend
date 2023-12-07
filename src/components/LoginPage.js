@@ -1,7 +1,7 @@
 import { React, useState, useContext, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import noteContext from "../context/notes/noteContext";
-import "./LoginPage.css";
+import "./LoginPage.css"; // That's how we can link a css file
 import useTitle from "./useTitle";
 
 const LoginPage = (props) => {
@@ -117,6 +117,7 @@ const LoginPage = (props) => {
           Login
         </button>
       </form>
+      <p className="anAccount" >Don't have an account? <Link to="/signup" className="linkStyleFix">Signup here</Link></p>
     </div>
   );
 };

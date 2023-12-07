@@ -21,6 +21,7 @@ nav{
 .mode-icon {
     color: white;
     font-size: 23px;
+    margin-right: 13px;
 }
 
 .mode-icon:hover{
@@ -33,4 +34,26 @@ nav{
     margin-left: 17px;
     display: flex;
     align-items: center;
+}
+
+.login-signup-container{
+    display: flex;
+    align-items: center;
+    width: 12vw;
+    justify-content: space-between;
+    margin-left: -28%;
+}
+
+@media (max-width: 839px) {
+    .login-signup-container{
+        margin-left: -0%;
+    }
+  }
+
+.logout-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 11vw;
+    margin-right: 28px;
 }

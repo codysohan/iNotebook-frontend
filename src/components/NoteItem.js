@@ -26,7 +26,11 @@ const NoteItem = (props) => {
   }, [notes]);
 
   return (
-    <div className="col-md-3 mx-4" data-bs-theme={mode}>
+    <div
+      className="col-md-3 mx-4"
+      data-bs-theme={mode}
+      style={{ width: "fit-content" }}
+    >
       <div className="card my-3" style={{ width: "18rem" }}>
         <span
           className={`position-absolute top-0 start-50 translate-middle badge rounded-pill bg-${TagColor} text-white`}

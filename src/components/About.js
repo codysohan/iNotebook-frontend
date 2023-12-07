@@ -1,4 +1,4 @@
-import React, {useEffect, useContext} from "react";
+import { React, useEffect, useContext} from "react";
 import noteContext from "../context/notes/noteContext";
 import "./About.css";
 import feature1 from '../media/images/feature-1.jpg';
@@ -10,8 +10,8 @@ const About = (props) => {
   useTitle(props.documentTitle)
   const context = useContext(noteContext);
   const { mode } = context;
+  
   // This is for dark mode and light mode
-
   useEffect(() => {
     if (mode === "dark") {
       document.body.style.backgroundColor = "black";

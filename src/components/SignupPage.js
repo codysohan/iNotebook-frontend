@@ -1,7 +1,8 @@
 import { React, useState, useContext, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import noteContext from "../context/notes/noteContext";
 import useTitle from "./useTitle";
+import "./SignupPage.css";
 
 const SignupPage = (props) => {
   useTitle(props.documentTitle);
@@ -161,6 +162,7 @@ const SignupPage = (props) => {
           Signup
         </button>
       </form>
+      <p className="anAccount" >Already have an account? <Link to="/login" className="linkStyleFix">Login here</Link></p>
     </div>
   );
 };

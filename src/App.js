@@ -13,13 +13,13 @@ import NoteState from "./context/notes/NoteState.js";
 import LoadingBar from "react-top-loading-bar";
 
 function App() {
-  document.title = "iNotebook - Your notes collection!";
   const [progress, setProgress] = useState(0);
   return (
     <>
       <BrowserRouter>
         <NoteState setProgress={setProgress}>
           <LoadingBar height={3} color="#f11946" progress={progress} />
+      <div className="app-container">
           <Navbar setProgress={setProgress} />
           <Alert />
           <Routes>
@@ -59,6 +59,7 @@ function App() {
               }
             />
           </Routes>
+          </div>
           <Footer />
         </NoteState>
       </BrowserRouter>
